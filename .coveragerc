@@ -1,0 +1,9 @@
+[report]
+exclude_lines =
+    pragma: no cover
+    def __str__
+    def __repr__
+    raise NotImplementedError
+omit =
+    *compat*
+    *migrations*
