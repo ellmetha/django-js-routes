@@ -105,3 +105,8 @@ venv.bak/
 
 # Editors
 .vscode/
+
+# Example project
+example_project/node_modules
+example_project/main/static/build_dev/*
+!example_project/main/static/build_dev/.gitkeep

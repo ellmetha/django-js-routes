@@ -1,0 +1,29 @@
+{
+    "extends": "airbnb",
+
+    "env": {
+        "browser": true,
+        "es6": true,
+        "jest/globals": true,
+        "node": true
+    },
+
+    "parser": "babel-eslint",
+
+    "plugins": [
+        "import", "jest", "react"
+    ],
+
+    "rules": {
+        "import/no-extraneous-dependencies": "off",
+        "indent": [2, 2, {"SwitchCase": 1}],
+        "max-len": [1, 100],
+        "no-alert": 0,
+        "no-console": 0,
+        "no-param-reassign": 0,
+        "no-return-assign": 0,
+        "no-underscore-dangle": 0,
+        "no-unused-vars": 1,
+        "no-useless-escape": 0
+    }
+}

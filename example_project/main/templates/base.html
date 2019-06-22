@@ -1,0 +1,66 @@
+
+{% load i18n %}
+{% load static %}
+
+<!DOCTYPE html>
+<html {% get_current_language as LANGUAGE_CODE %}lang="{{ LANGUAGE_CODE }}">
+  <head>
+    {% block head %}
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <title>Django JS Routes example</title>
+    <meta name="created" content="{% now "jS M Y h:i" %}" />
+    {% endblock head %}
+
+    {% block css %}
+    {% if not WEBPACK_DEV_SERVER_URL %}<link rel="stylesheet" type="text/css" href="{% static 'css/App.css' %}" />{% endif %}
+    {% endblock css %}
+
+    {% block extra_css %}
+    {% endblock extra_css %}
+  </head>
+  <body
+      id="{% block body_id %}id_body{% endblock body_id %}"
+      class="{% block body_class %}{% endblock %}"
+      data-controller="{% block data_controller %}{% endblock data_controller %}"
+      data-action="{% block data_action %}{% endblock data_action %}"
+      >
+    <div id="id_wrap">
+      {% block header %}
+      <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="/">
+            Django JS Routes example
+          </a>
+
+          <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+      </nav>
+      {% endblock header %}
+
+      {% block content %}
+      {% endblock content %}
+
+      {% block footer %}
+      <footer class="footer">
+        <div class="content has-text-centered">
+          <p>
+            &copy; <strong>Django JS Routes</strong> - <a href="https://github.com/ellmetha/django-js-routes">Github repository</a>
+          </p>
+        </div>
+      </footer>
+      {% endblock footer %}
+    </div>
+
+    {% block js %}
+    <script src="{{ WEBPACK_DEV_SERVER_URL|default:'' }}{% static 'js/App.js' %}"></script>
+    {% endblock js %}
+
+    {% block extra_js %}
+    {% endblock extra_js %}
+  </body>
+</html>

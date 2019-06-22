@@ -12,6 +12,7 @@ isort = "*"
 ipython = "*"
 codecov = "*"
 pytest-django = "*"
+django-debug-toolbar = "*"
 
 [packages]
 e1839a8 = {editable = true,path = "."}
