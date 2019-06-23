@@ -1,0 +1,28 @@
+{
+  "name": "django-js-routes",
+  "repository": "https://github.com/ellmetha/django-js-routes",
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/polyfill": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "jest": "^24.8.0"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "js_routes/static/js/**/*.{js,jsx}"
+    ],
+    "coverageDirectory": "./coverage/",
+    "moduleDirectories": [
+      "node_modules",
+      "js_routes/static/js"
+    ],
+    "testRegex": "(/tests/jstests/.*|\\.(react-test|spec|test))\\.(ts|tsx|js|jsx)$"
+  },
+  "scripts": {
+    "test": "jest"
+  }
+}

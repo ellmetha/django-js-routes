@@ -46,6 +46,7 @@ coverage.xml
 *.cover
 .hypothesis/
 .pytest_cache/
+/coverage/
 
 # Translations
 *.mo
@@ -105,6 +106,9 @@ venv.bak/
 
 # Editors
 .vscode/
+
+# Node.js modules
+node_modules/
 
 # Example project
 example_project/node_modules

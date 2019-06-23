@@ -6,11 +6,7 @@ window.reverseUrl = (function () {
     var url = urlPattern;
 
     if (!urlPattern) {
-      throw "URL '" + name + "' not found";
-    }
-
-    if (arguments.length === 0) {
-      return url;
+      throw "URL '" + name + "' not found.";
     }
 
     const tokens = urlPattern.match(argRegex);
@@ -27,8 +23,10 @@ window.reverseUrl = (function () {
           }
           url = url.replace(token, argValue);
         }
+      } else {
+        throw "URL '" + name + "' does not expect any arguments.";
       }
-    } else {
+    } else if (arguments[1] !== undefined) {
       const argsArray = Array.isArray(arguments[1]) ? arguments[1] :
         Array.prototype.slice.apply(arguments, [1, arguments.length]);
       if (tokens) {
@@ -41,6 +39,8 @@ window.reverseUrl = (function () {
           const argValue = argsArray[i];
           url = url.replace(token, argValue);
         }
+      } else {
+        throw "URL '" + name + "' does not expect any arguments.";
       }
     }
 
