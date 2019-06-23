@@ -1,6 +1,7 @@
 
 {% load i18n %}
 {% load static %}
+{% load js_routes_tags %}
 
 <!DOCTYPE html>
 <html {% get_current_language as LANGUAGE_CODE %}lang="{{ LANGUAGE_CODE }}">
@@ -59,6 +60,9 @@
     {% block js %}
     <script src="{{ WEBPACK_DEV_SERVER_URL|default:'' }}{% static 'js/App.js' %}"></script>
     {% endblock js %}
+
+    {% js_routes %}
+    <script src="{% static 'js/routes/resolver.js' %}"></script>
 
     {% block extra_js %}
     {% endblock extra_js %}

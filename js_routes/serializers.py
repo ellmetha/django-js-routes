@@ -120,3 +120,6 @@ class URLPatternsSerializer:
         )
 
         return url
+
+
+url_patterns_serializer = URLPatternsSerializer()
