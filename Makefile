@@ -52,18 +52,30 @@ isort:
 .PHONY: t tests
 ## Alias of "tests".
 t: tests
+## Run all the test suites.
+tests: tests_python tests_javascript
+## Run the Javascript test suite.
+tests_javascript:
+	npm test
 ## Run the Python test suite.
-tests:
+tests_python:
 	pipenv run py.test
 
 .PHONY: coverage
+## Collects code coverage data for all codebases.
+coverage: coverage_python coverage_javascript
+## Collects code coverage data for the Javascript codebase.
+coverage_javascript:
+	npm test
 ## Collects code coverage data for the Python codebase.
-coverage:
+coverage_python:
 	pipenv run py.test --cov-report term-missing --cov $(PROJECT_PACKAGE)
 
 .PHONY: spec spec_python
+# Run test suites in "spec" mode.
+spec: spec_python
 # Run the Python test suite in "spec" mode.
-spec:
+spec_python:
 	pipenv run py.test --spec -p no:sugar
 
 
