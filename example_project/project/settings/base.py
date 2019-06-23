@@ -239,3 +239,15 @@ WSGI_APPLICATION = 'wsgi.application'
 
 # URL of the admin page
 ADMIN_URL = get_envsetting('ADMIN_URL')
+
+
+# JS ROUTES CONFIGURATION
+# ------------------------------------------------------------------------------
+
+JS_ROUTES_INCLUSION_LIST = [
+    'home',
+    'home_with_arg',
+    'home_with_two_args',
+    'home_with_re_arg',
+    'home_with_arg_without_converter',
+]
