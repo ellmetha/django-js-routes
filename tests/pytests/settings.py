@@ -15,7 +15,7 @@ import pathlib
 # ------------------------------------------------------------------------------
 
 TEST_PATH = pathlib.Path(__file__)
-PROJECT_PATH = TEST_PATH.parents[2]
+PROJECT_PATH = TEST_PATH.parents[3]
 
 
 # APP CONFIGURATION
@@ -38,7 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
 
     # Local apps
-    'tests',
+    'tests.pytests',
 )
 
 
@@ -128,4 +128,4 @@ MEDIA_ROOT = str(TEST_PATH / '_testdata' / 'media')
 # URL CONFIGURATION
 # ------------------------------------------------------------------------------
 
-ROOT_URLCONF = 'tests._testsite.urls'
+ROOT_URLCONF = 'tests.pytests._testsite.urls'
