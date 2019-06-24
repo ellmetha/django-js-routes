@@ -117,6 +117,9 @@ TEMPLATES = [
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#static-root
 STATIC_ROOT = str(TEST_PATH / '_testdata' / 'static')
 
+# See: https://docs.djangoproject.com/en/dev/ref/settings/#static-url
+STATIC_URL = '/static/'
+
 
 # MEDIA CONFIGURATION
 # ------------------------------------------------------------------------------
