@@ -23,6 +23,9 @@ c: console
 console:
 	pipenv run ipython
 
+static_resolver:
+	pipenv run ipython ./js_routes/_scripts/build_static_resolver.py
+
 
 # QUALITY ASSURANCE
 # ~~~~~~~~~~~~~~~~~
