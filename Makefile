@@ -23,6 +23,8 @@ c: console
 console:
 	pipenv run ipython
 
+.PHONY: static_resolver
+## Regenerate the static version of the routes resolver.
 static_resolver:
 	pipenv run ipython ./js_routes/_scripts/build_static_resolver.py
 
