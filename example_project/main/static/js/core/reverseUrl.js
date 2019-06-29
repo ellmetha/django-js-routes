@@ -1,8 +1,11 @@
-{{ var_assignment|default:'window.reverseUrl' }} = (function () {
+/* eslint-disable */
+
+const routes = {"home": "/", "home_with_arg": "/home/<year>/", "home_with_two_args": "/home/<year>/<month>/", "home_with_re_arg": "/home/<year>/", "home_with_arg_without_converter": "/home/<slug>/"};
+const reverseUrl  = (function () {
   const argRegex = /<\w*>/g;
 
   return function(name) {
-    const urlPattern = {{ routes_var|default:'window.routes' }}[name];
+    const urlPattern = routes[name];
     var url = urlPattern;
 
     if (!urlPattern) {
@@ -42,3 +45,6 @@
     return url;
   };
 })();
+
+
+export default reverseUrl;
