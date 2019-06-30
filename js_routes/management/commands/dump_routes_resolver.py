@@ -35,7 +35,7 @@ class Command(BaseCommand):
         output = open(options['output'], 'w') if options['output'] else self.stdout
         output.write(
             render_to_string(
-                'js_routes/dump_formats/{}.js'.format(options['format']),
+                'js_routes/_dump/{}.js'.format(options['format']),
                 {'routes': url_patterns_serializer.to_json()}
             )
         )
