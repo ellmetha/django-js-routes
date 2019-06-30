@@ -7,4 +7,4 @@ exclude_lines =
 omit =
     *compat*
     *migrations*
-    *resolver*
+    *_scripts*
