@@ -22,3 +22,15 @@ class TestJsRoutesTag:
             '<script>window.routes = {};</script>'.format(safe(url_patterns_serializer.to_json())) +
             '\n<script src="{}"></script>'.format(static('js/routes/resolver.js'))
         )
+
+    @override_and_reload_settings(JS_ROUTES_INCLUSION_LIST=['ping', ])
+    def test_render_only_serialized_routes_if_the_include_routes_only_option_is_used(self, rf):
+        def get_rendered():
+            t = Template(self.loadstatement + '{% js_routes include_routes_only=True %}')
+            c = Context({})
+            rendered = t.render(c)
+            return rendered
+
+        assert get_rendered().strip() == (
+            '<script>window.routes = {};</script>'.format(safe(url_patterns_serializer.to_json()))
+        )
