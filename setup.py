@@ -24,7 +24,7 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     url='https://github.com/ellmetha/django-js-routes',
-    license='BSD',
+    license='MIT',
     description='Expose and perform reverse lookups of Django URLs in the frontend world.',
     long_description=read_relative_file('README.rst'),
     keywords='django urls reverse routes resolution frontend js javascript export',
