@@ -27,7 +27,7 @@ class Command(BaseCommand):
         )
         parser.add_argument(
             '-o', '--output',
-            help='Specifies file to which the output is written.'
+            help='Specifies a file to which the output is written.'
         )
 
     def handle(self, *args, **options):
