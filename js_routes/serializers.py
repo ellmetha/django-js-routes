@@ -78,7 +78,7 @@ class URLPatternsSerializer:
             url = url_pattern.pattern._regex
         elif isinstance(url_pattern.pattern, RoutePattern):
             url = url_pattern.pattern._route
-        else:
+        else:  # pragma: no cover
             raise ValueError(
                 'url_pattern must be a valid URL pattern ; "{}" is not'.format(url_pattern)
             )
