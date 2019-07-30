@@ -127,14 +127,14 @@ command, which can be used as follows:
 
     $ python manage.py dump_routes_resolver --format=default --output=my_exported_resolver.js
 
-The ``--output`` option allows to specify in which file the serialized routes and resolver function
+The ``--output`` option allows to specify to which file the serialized routes and resolver function
 should be saved while the ``--format`` option allows to specify the Javascript format to use.
 
 ``--format`` accepts the following values:
 
-* ``default`` include the routes as a Javascript object that is associated to the ``window`` object
-  while the URL resolver is available through the ``window.reverseUrl`` function (which is similar
-  to the behaviour provided by the ``{% js_routes %}`` template tag)
+* ``default`` include the routes as an object that is associated to ``window`` while the URL
+  resolver is available through the ``window.reverseUrl`` function (which is similar to the
+  behaviour provided by the ``{% js_routes %}`` template tag)
 * ``es6`` allows to save the routes and the URL resolver as an ES6 module where the ``reverseUrl``
   is the default export
 
