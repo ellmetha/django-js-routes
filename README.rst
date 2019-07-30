@@ -46,7 +46,7 @@ helper. This list should contain only URL pattern names or namespaces. Here is a
 
 Note that if a namespace is included in this list, all the underlying URLs will be made available to
 the client side through the generated Javascript helper. Django-js-routes is safe by design in the
-sense that _only_ the URLs that you configure in this inclusion list will be publicly exposed on the
+sense that *only* the URLs that you configure in this inclusion list will be publicly exposed on the
 client side.
 
 Once the list of URLs to expose is configured, you can add the `{% js_routes %}` to your base
