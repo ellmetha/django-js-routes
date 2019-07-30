@@ -96,7 +96,7 @@ Advanced features
 Inserting only the serialized URLs in Django templates
 ------------------------------------------------------
 
-By default, the ``{% js_routes %}`` template tag only allows to trigger the generation of the
+By default, the ``{% js_routes %}`` template tag only allows to trigger the generation of the
 serialized URLs (which are stored in a Javascript object on the ``window`` object) and to include a
 Javascript URL resolver function in your HTML using the Django's
 `static <https://docs.djangoproject.com/en/dev/ref/templates/builtins/#static>`_ template tag.
@@ -115,7 +115,7 @@ Django-js-routes using another ``static`` statement. This also allows you to cac
 Dumping the Javascript routes resolver
 --------------------------------------
 
-As explained earlier, the ``{% js_routes %}`` template tag triggers the generation of the serialized
+As explained earlier, the ``{% js_routes %}`` template tag triggers the generation of the serialized
 URLs and includes a client-side URL resolver in the final HTML. One inconvenient with this behaviour
 is that the serialized URLs need to be generated every time your HTML template is rendered.
 
