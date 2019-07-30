@@ -81,6 +81,14 @@ the Django side:
 Settings
 ========
 
+JS_ROUTES_INCLUSION_LIST
+------------------------
+
+Default: ``[]``
+
+The ``JS_ROUTES_INCLUSION_LIST`` setting allows to define the URL patterns and URL namespaces that
+should be exposed to the client side through the generated Javascript helper.
+
 License
 =======
 
