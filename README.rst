@@ -49,7 +49,7 @@ the client side through the generated Javascript helper. Django-js-routes is saf
 sense that *only* the URLs that you configure in this inclusion list will be publicly exposed on the
 client side.
 
-Once the list of URLs to expose is configured, you can add the ``{% js_routes %}`` to your base
+Once the list of URLs to expose is configured, you can add the ``{% js_routes %}`` tag to your base
 template in order to ensure that the Javascript helper is available to you when you need it:
 
 .. code-block:: html
@@ -71,6 +71,7 @@ The URL patterns you configured through the ``JS_ROUTES_INCLUSION_LIST`` setting
 reversed using the generated ``window.reverseUrl`` function, which can be used pretty much the
 "same" way you'd use `reverse <https://docs.djangoproject.com/en/dev/ref/urlresolvers/#reverse>`_ on
 the Django side:
+
 .. code-block:: javascript
 
     const url1 = window.reverse('home');
