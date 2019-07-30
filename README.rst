@@ -49,7 +49,7 @@ the client side through the generated Javascript helper. Django-js-routes is saf
 sense that *only* the URLs that you configure in this inclusion list will be publicly exposed on the
 client side.
 
-Once the list of URLs to expose is configured, you can add the `{% js_routes %}` to your base
+Once the list of URLs to expose is configured, you can add the ``{% js_routes %}`` to your base
 template in order to ensure that the Javascript helper is available to you when you need it:
 
 .. code-block:: html
@@ -59,7 +59,7 @@ template in order to ensure that the Javascript helper is available to you when 
         <head>
         </head>
         <body>
-            <-- At the bottom of the document's body... -->
+            <!-- At the bottom of the document's body... -->
             {% js_routes %}
         </body>
     </html>
