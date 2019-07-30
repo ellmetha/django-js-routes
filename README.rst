@@ -21,7 +21,7 @@ To install Django-js-routes, please use the pip_ command as follows:
 
     $ pip install --pre django-js-routes
 
-Once the package is installed, you'll have to add the application to ``INSTALLED_APPS` in your
+Once the package is installed, you'll have to add the application to ``INSTALLED_APPS`` in your
 project's settings module:
 
 .. code-block:: python
