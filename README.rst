@@ -116,12 +116,12 @@ Dumping the Javascript routes resolver
 --------------------------------------
 
 As explained earlier, the ``{% js_routes %}`` template tag triggers the generation of the serialized
-URLs and includes a client-side URL resolver in the final HTML. One inconvenient with this behaviour
-is that the serialized URLs need to be generated every time your HTML template is rendered.
+URLs and includes a client-side URL resolver in the final HTML. One drawback of this behaviour is
+that the serialized URLs need to be generated every time your HTML template is rendered.
 
-Instead it is possible to just dump the whole list of serialized URLs and the URL resolver function
-to a single Javascript module file. This can be achieved using the ``dump_routes_resolver`` command,
-which can be used as follows:
+Instead it is possible to just dump the whole list of serialized URLs AND the URL resolver function
+into a single Javascript module file. This can be achieved using the ``dump_routes_resolver``
+command, which can be used as follows:
 
 .. code-block:: shell
 
