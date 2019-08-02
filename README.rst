@@ -109,14 +109,15 @@ Actually, a standard use of the ``{% js_routes %}`` statement is equivalent to:
 
 The ``include_routes_only`` option allows to only include the serialized URLs in the output of
 ``{% js_routes %}``. It gives you the ability to include the Javascript URL resolver that comes with
-Django-js-routes using another ``static`` statement. This also allows you to cache the output of
-``{% js_routes %}`` if you want.
+Django-js-routes using another ``static`` statement. This also allows you to cache the output of the
+``{% js_routes include_routes_only=True %}`` statement if you want (so that serialized URLs are not
+generated for every request).
 
 Dumping the Javascript routes resolver
 --------------------------------------
 
 As explained earlier, the ``{% js_routes %}`` template tag triggers the generation of the serialized
-URLs and includes a client-side URL resolver in the final HTML. One drawback of this behaviour is
+URLs and includes a client-side URL resolver in the final HTML. One downside of this behaviour is
 that the serialized URLs need to be generated every time your HTML template is rendered.
 
 Instead it is possible to just dump the whole list of serialized URLs AND the URL resolver function
@@ -136,7 +137,7 @@ should be saved while the ``--format`` option allows to specify the Javascript f
   resolver is available through the ``window.reverseUrl`` function (which is similar to the
   behaviour provided by the ``{% js_routes %}`` template tag)
 * ``es6`` allows to save the routes and the URL resolver as an ES6 module where the ``reverseUrl``
-  is the default export
+  function is the default export
 
 License
 =======
