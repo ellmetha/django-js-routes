@@ -133,7 +133,7 @@ should be saved while the ``--format`` option allows to specify the Javascript f
 
 ``--format`` accepts the following values:
 
-* ``default`` include the routes as an object that is associated to ``window`` while the URL
+* ``default`` includes the routes as an object that is associated to ``window`` while the URL
   resolver is available through the ``window.reverseUrl`` function (which is similar to the
   behaviour provided by the ``{% js_routes %}`` template tag)
 * ``es6`` allows to save the routes and the URL resolver as an ES6 module where the ``reverseUrl``
