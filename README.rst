@@ -104,13 +104,13 @@ Actually, a standard use of the ``{% js_routes %}`` statement is equivalent to:
 
 .. code-block:: html
 
-    {% js_routes include_routes_only=True %}
+    {% js_routes routes_only=True %}
     <script src="{% static 'js/routes/resolver.js' %}"></script>
 
-The ``include_routes_only`` option allows to only include the serialized URLs in the output of
+The ``routes_only`` option allows to only include the serialized URLs in the output of
 ``{% js_routes %}``. It gives you the ability to include the Javascript URL resolver that comes with
 Django-js-routes using another ``static`` statement. This also allows you to cache the output of the
-``{% js_routes include_routes_only=True %}`` statement if you want (so that serialized URLs are not
+``{% js_routes routes_only=True %}`` statement if you want (so that serialized URLs are not
 generated for every request).
 
 Dumping the Javascript routes resolver

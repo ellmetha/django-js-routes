@@ -16,9 +16,9 @@ register = template.Library()
 
 
 @register.inclusion_tag('js_routes/routes.html', takes_context=False)
-def js_routes(include_routes_only=False):
+def js_routes(routes_only=False):
     """ Includes the serialized version of the exposed URLs in the template. """
     return {
         'routes': url_patterns_serializer.to_json(),
-        'include_routes_only': include_routes_only,
+        'routes_only': routes_only,
     }
