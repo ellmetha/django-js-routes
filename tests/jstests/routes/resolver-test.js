@@ -46,27 +46,27 @@ describe('resolver', () => {
 
   test('throws if the URL name is not known', () => {
     expect(() => window.reverseUrl('unknown', { year: 2001, month: 12 }))
-      .toThrowError("URL 'unknown' not found.");
+      .toThrowError("URL 'unknown' was not found.");
   });
 
   test('throws if the number of positional arguments does not match the expected arguments', () => {
     expect(() => window.reverseUrl('home_with_many_positional_args', 'foo', 'bar', '1', '2', '3'))
-      .toThrowError('Wrong number of arguments ; expected 2 arguments.');
+      .toThrowError('Invalid URL lookup: Wrong number of arguments ; expected 2 arguments.');
     expect(() => window.reverseUrl('home_with_many_positional_args', ['foo', 'bar', '1', '2', '3']))
-      .toThrowError('Wrong number of arguments ; expected 2 arguments.');
+      .toThrowError('Invalid URL lookup: Wrong number of arguments ; expected 2 arguments.');
   });
 
   test('throws if an expected named argument is not provided', () => {
     expect(() => window.reverseUrl('home_with_many_named_args', { year: 2001 }))
-      .toThrowError("Argument 'month' not provided.");
+      .toThrowError("Invalid URL lookup: Argument 'month' was not provided.");
   });
 
   test('throws if an URL without argument is resolved with unexpected arguments', () => {
     expect(() => window.reverseUrl('home', { year: 2001 }))
-      .toThrowError("URL 'home' does not expect any arguments.");
+      .toThrowError("Invalid URL lookup: URL 'home' does not expect any arguments.");
     expect(() => window.reverseUrl('home', 'foo', 'bar'))
-      .toThrowError("URL 'home' does not expect any arguments.");
+      .toThrowError("Invalid URL lookup: URL 'home' does not expect any arguments.");
     expect(() => window.reverseUrl('home', ['foo', 'bar']))
-      .toThrowError("URL 'home' does not expect any arguments.");
+      .toThrowError("Invalid URL lookup: URL 'home' does not expect any arguments.");
   });
 });
