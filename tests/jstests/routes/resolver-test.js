@@ -51,9 +51,9 @@ describe('resolver', () => {
 
   test('throws if the number of positional arguments does not match the expected arguments', () => {
     expect(() => window.reverseUrl('home_with_many_positional_args', 'foo', 'bar', '1', '2', '3'))
-      .toThrowError('Wrong number of arguments ; espected 2 arguments.');
+      .toThrowError('Wrong number of arguments ; expected 2 arguments.');
     expect(() => window.reverseUrl('home_with_many_positional_args', ['foo', 'bar', '1', '2', '3']))
-      .toThrowError('Wrong number of arguments ; espected 2 arguments.');
+      .toThrowError('Wrong number of arguments ; expected 2 arguments.');
   });
 
   test('throws if an expected named argument is not provided', () => {
