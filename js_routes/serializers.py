@@ -4,7 +4,7 @@
 
     This modules defines serializer classes responsible for extracting Django URLs that should be
     exposed to the client side to a specific format (eg. JSON). The resoluting exports are likely to
-    be used in a Javascript module to provide reverse lookup functionality to the client side.
+    be used in a Javascript module to provide reverse lookup functionality on the client side.
 
 """
 
