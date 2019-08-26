@@ -34,6 +34,7 @@ install:
   - pip install pip pipenv -U
   - pipenv install "$DJANGO_ENV" --skip-lock
   - pipenv install --dev --skip-lock
+  - npm install --dev
 script:
   - make qa
   - make coverage
