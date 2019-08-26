@@ -1,6 +1,12 @@
 django-js-routes
 ################
 
+.. image:: https://travis-ci.org/ellmetha/django-js-routes.svg?branch=master
+    :target: https://travis-ci.org/ellmetha/django-js-routes
+
+.. image:: https://codecov.io/gh/ellmetha/django-js-routes/branch/master/graph/badge.svg
+    :target: https://codecov.io/gh/ellmetha/django-js-routes
+
 **Django-js-routes** is a Django application allowing to expose and perform reverse lookups of
 Django named URL patterns on the client side.
 
