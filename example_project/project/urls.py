@@ -36,4 +36,4 @@ if settings.DEBUG:
     ]
 
 
-urlpatterns.append(path('', include('main.public.urls')))
+urlpatterns.append(path('', include('main.presentation.urls')))
