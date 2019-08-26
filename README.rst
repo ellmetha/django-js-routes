@@ -74,10 +74,10 @@ the Django side:
 
 .. code-block:: javascript
 
-    const url1 = window.reverse('home');
-    const url2 = window.reverse('catalog:product_list');
-    const url3 = window.reverse('catalog:product_detail', productId);
-    const url4 = window.reverse('catalog:product_detail', { pk: productId });
+    const url1 = window.reverseUrl('home');
+    const url2 = window.reverseUrl('catalog:product_list');
+    const url3 = window.reverseUrl('catalog:product_detail', productId);
+    const url4 = window.reverseUrl('catalog:product_detail', { pk: productId });
 
 Settings
 ========
