@@ -48,7 +48,10 @@ def get_envsetting(setting, default=ENVSETTINGS_NIL, secrets=secrets):
     except KeyError:
         if default is not ENVSETTINGS_NIL:
             return default
-        error_msg = f'Set the {setting} environment variable in the {ENVSETTINGS_FILENAME} file'
+        error_msg = 'Set the {} environment variable in the {} file'.format(
+            setting,
+            ENVSETTINGS_FILENAME
+        )
         raise ImproperlyConfigured(error_msg)
 
 
