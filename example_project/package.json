@@ -26,7 +26,6 @@
     "gulp": "^4.0.0",
     "gulp-env": "^0.4.0",
     "gulp-less": "^4.0.0",
-    "gulp-mjml": "^3.0.0",
     "gulp-util": "^3.0.8",
     "jest": "^24.5.0",
     "less-loader": "^4.1.0",
@@ -41,10 +40,8 @@
     "script-loader": "^0.7.2",
     "style-loader": "^0.23.1",
     "url-loader": "^1.0.1",
-    "vinyl-named": "^1.1.0",
     "webpack": "^4.26.1",
-    "webpack-dev-server": "^3.1.14",
-    "webpack-stream": "^5.1.1"
+    "webpack-dev-server": "^3.1.14"
   },
   "scripts": {
     "gulp": "gulp",
