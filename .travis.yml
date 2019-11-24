@@ -22,7 +22,7 @@ env:
 matrix:
   exclude:
     - python: "3.5"
-      env: DJANGO_ENV="django==3.0b1"
+      env: DJANGO_ENV="django==3.0rc1"
 
 install:
   - pip install pip pipenv -U
