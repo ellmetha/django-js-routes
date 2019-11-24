@@ -7,6 +7,10 @@ init:
 
 	pipenv install --dev --three
 
+	@printf "\n\n${YELLOW}---------------- Initialization ---${RESET} ${GREEN}Node.js dependencies${RESET}\n\n"
+
+	npm install
+
 	@printf "\n\n${YELLOW}---------------- Done.${RESET}\n\n"
 
 
