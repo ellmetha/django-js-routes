@@ -10,26 +10,17 @@ addons:
       - sqlite3
 
 python:
-  - "3.4"
   - "3.5"
   - "3.6"
   - "3.7"
   - "3.8-dev"
 
 env:
-  - DJANGO_ENV="django>=2.0,<2.1"
-  - DJANGO_ENV="django>=2.1,<2.2"
   - DJANGO_ENV="django>=2.2,<3.0"
-  - DJANGO_ENV="django==3.0b1"
+  - DJANGO_ENV="django==3.0rc1"
 
 matrix:
   exclude:
-    - python: "3.4"
-      env: DJANGO_ENV="django>=2.1,<2.2"
-    - python: "3.4"
-      env: DJANGO_ENV="django>=2.2,<3.0"
-    - python: "3.4"
-      env: DJANGO_ENV="django==3.0b1"
     - python: "3.5"
       env: DJANGO_ENV="django==3.0b1"
 
