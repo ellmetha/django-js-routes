@@ -2,4 +2,5 @@ include LICENSE
 include MANIFEST.in
 include *.rst
 global-exclude *.pyc
+graft js_routes/templates
 recursive-exclude tests *
