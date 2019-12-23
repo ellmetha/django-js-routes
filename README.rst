@@ -1,11 +1,24 @@
 django-js-routes
 ################
 
-.. image:: https://travis-ci.org/ellmetha/django-js-routes.svg?branch=master
-    :target: https://travis-ci.org/ellmetha/django-js-routes
+.. image:: https://img.shields.io/pypi/l/django-js-routes.svg
+    :target: https://pypi.python.org/pypi/django-js-routes/
+    :alt: License
 
-.. image:: https://codecov.io/gh/ellmetha/django-js-routes/branch/master/graph/badge.svg
-    :target: https://codecov.io/gh/ellmetha/django-js-routes
+.. image:: https://img.shields.io/pypi/pyversions/django-js-routes.svg
+    :target: https://pypi.python.org/pypi/django-js-routes
+
+.. image:: https://img.shields.io/pypi/v/django-js-routes.svg
+    :target: https://pypi.python.org/pypi/django-js-routes/
+    :alt: Latest Version
+
+.. image:: https://img.shields.io/travis/ellmetha/django-js-routes.svg
+    :target: https://travis-ci.org/ellmetha/django-js-routes
+    :alt: Build status
+
+.. image:: https://img.shields.io/codecov/c/github/ellmetha/django-js-routes.svg
+    :target: https://codecov.io/github/ellmetha/django-js-routes
+    :alt: Codecov status
 
 |
 
