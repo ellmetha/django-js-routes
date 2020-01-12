@@ -10,3 +10,8 @@ This is the initial release of Django-js-routes.
 =====
 
 * Add official support for Python 3.8
+
+0.1.2
+=====
+
+* Fix package classifiers
