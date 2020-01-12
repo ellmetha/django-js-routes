@@ -30,9 +30,9 @@ include = ["LICENSE", "*.rst", "js_routes/templates/*"]
 exclude = ["tests"]
 
 [tool.poetry.dependencies]
-python = "^3.4"
+python = "^3.5"
 
-django = ">=2.0"
+django = "^2.2 || >=3.0"
 
 [tool.poetry.dev-dependencies]
 codecov = "*"

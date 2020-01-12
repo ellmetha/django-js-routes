@@ -27,7 +27,7 @@ matrix:
 install:
   - pip install pip poetry -U
   - poetry install
-  - poetry add "$DJANGO_ENV"
+  - poetry run pip install -U "$DJANGO_ENV"
   - npm install --dev
 script:
   - make qa
