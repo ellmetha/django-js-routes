@@ -15,3 +15,8 @@ This is the initial release of Django-js-routes.
 =====
 
 * Fix package classifiers
+
+0.1.3
+=====
+
+* Fix Django version in README
