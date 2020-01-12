@@ -1,0 +1,4 @@
+[flake8]
+exclude = build,docs,.tox,.venv,migrations,node_modules,dist
+ignore = E731, W504
+max-line-length = 100

@@ -1,0 +1,51 @@
+[tool.poetry]
+name = "django-js-routes"
+version = "0.1.1.dev0"
+description = "Expose and perform reverse lookups of Django URLs in the frontend world."
+authors = ["Morgan Aubert <me@morganaubert.name>"]
+license = "MIT"
+readme = "README.rst"
+homepage = "https://github.com/ellmetha/django-js-routes"
+repository = "https://github.com/ellmetha/django-js-routes"
+keywords = ["django", "urls", "reverse", "javascript", "export"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Web Environment",
+    "Framework :: Django",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: BSD License",
+    "Natural Language :: English",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.4",
+    "Programming Language :: Python :: 3.5",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+]
+packages = [
+    { include = "js_routes" },
+]
+include = ["LICENSE", "*.rst", "js_routes/templates/*"]
+exclude = ["tests"]
+
+[tool.poetry.dependencies]
+python = "^3.4"
+
+django = ">=2.0"
+
+[tool.poetry.dev-dependencies]
+codecov = "*"
+django-debug-toolbar = "*"
+flake8 = "*"
+ipython = "*"
+isort = "*"
+pytest = "*"
+pytest-cov = "*"
+pytest-spec = "*"
+pytest-django = "*"
+pytest-pythonpath = "^0.7.3"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"

@@ -5,7 +5,7 @@ TEST_PACKAGE := tests
 init:
 	@printf "\n\n${YELLOW}---------------- Initialization ---${RESET} ${GREEN}Python dependencies${RESET}\n\n"
 
-	pipenv install --dev --three
+	poetry install
 
 	@printf "\n\n${YELLOW}---------------- Initialization ---${RESET} ${GREEN}Node.js dependencies${RESET}\n\n"
 
@@ -25,12 +25,12 @@ init:
 c: console
 ## Launch a development console.
 console:
-	pipenv run ipython
+	poetry run ipython
 
 .PHONY: static_resolver
 ## Regenerate the static version of the routes resolver.
 static_resolver:
-	pipenv run ipython ./js_routes/_scripts/build_static_resolver.py
+	poetry run ipython ./js_routes/_scripts/build_static_resolver.py
 
 
 # QUALITY ASSURANCE
@@ -45,12 +45,12 @@ qa: lint isort
 .PHONY: lint
 ## Trigger Python code quality checks (flake8).
 lint:
-	pipenv run flake8
+	poetry run flake8
 
 .PHONY: isort
 ## Check Python imports sorting.
 isort:
-	pipenv run isort --check-only --recursive --diff $(PROJECT_PACKAGE) $(TEST_PACKAGE)
+	poetry run isort --check-only --recursive --diff $(PROJECT_PACKAGE) $(TEST_PACKAGE)
 
 
 # TESTING
@@ -68,7 +68,7 @@ tests_javascript:
 	npm test
 ## Run the Python test suite.
 tests_python:
-	pipenv run py.test
+	poetry run py.test
 
 .PHONY: coverage
 ## Collects code coverage data for all codebases.
@@ -78,14 +78,14 @@ coverage_javascript:
 	npm test
 ## Collects code coverage data for the Python codebase.
 coverage_python:
-	pipenv run py.test --cov-report term-missing --cov $(PROJECT_PACKAGE)
+	poetry run py.test --cov-report term-missing --cov $(PROJECT_PACKAGE)
 
 .PHONY: spec spec_python
 # Run test suites in "spec" mode.
 spec: spec_python
 # Run the Python test suite in "spec" mode.
 spec_python:
-	pipenv run py.test --spec -p no:sugar
+	poetry run py.test --spec -p no:sugar
 
 
 # MAKEFILE HELPERS
