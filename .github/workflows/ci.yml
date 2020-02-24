@@ -1,0 +1,57 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [
+          3.5,
+          3.6,
+          3.7,
+          3.8,
+        ]
+        django-version: [
+          "django>=2.2,<3.0",
+          "django>=3.0,<3.1",
+        ]
+        exclude:
+          - python-version: 3.5
+            django-version: "django>=3.0,<3.1"
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v1
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Use Node.js 12.x
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12.x
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -U pip poetry
+        poetry install
+        poetry run pip install -U "${{ matrix.django-version }}"
+        npm install --dev
+    - name: Run QA checks
+      run: make qa
+    - name: Run Python tests suite
+      run: poetry run pytest --cov-report xml --cov js_routes
+    - name: Run JS test suite
+      run: npm test
+    - name: Upload coverage to Codecov
+      if: matrix.python-version == 3.8 && matrix.django-version == 'django>=3.0,<3.1'
+      uses: codecov/codecov-action@v1
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+        file: ./coverage.xml
+        flags: unittests
+        name: codecov-umbrella
+        yml: ./codecov.yml
+        fail_ci_if_error: true
