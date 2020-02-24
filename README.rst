@@ -12,9 +12,9 @@ django-js-routes
     :target: https://pypi.python.org/pypi/django-js-routes/
     :alt: Latest Version
 
-.. image:: https://img.shields.io/travis/ellmetha/django-js-routes.svg
-    :target: https://travis-ci.org/ellmetha/django-js-routes
-    :alt: Build status
+.. image:: https://github.com/ellmetha/django-js-routes/workflows/CI/badge.svg
+  :target: https://github.com/ellmetha/django-js-routes/actions
+  :alt: Build status
 
 .. image:: https://img.shields.io/codecov/c/github/ellmetha/django-js-routes.svg
     :target: https://codecov.io/github/ellmetha/django-js-routes
