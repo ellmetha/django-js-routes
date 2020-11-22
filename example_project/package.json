@@ -39,7 +39,7 @@
     "sass-loader": "^7.1.0",
     "save": "^2.3.3",
     "script-loader": "^0.7.2",
-    "serialize-javascript": ">=2.1.1",
+    "serialize-javascript": ">=3.1.0",
     "set-value": ">=2.0.1",
     "style-loader": "^0.23.1",
     "url-loader": "^1.0.1",
