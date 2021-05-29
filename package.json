@@ -2,7 +2,6 @@
   "name": "django-js-routes",
   "repository": "https://github.com/ellmetha/django-js-routes",
   "private": true,
-  "dependencies": {},
   "devDependencies": {
     "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.5",
