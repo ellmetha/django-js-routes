@@ -13,7 +13,8 @@ import re
 from urllib.parse import urljoin
 
 from django.urls import get_resolver
-from django.urls.resolvers import RegexPattern, RoutePattern, URLPattern, URLResolver
+from django.urls.resolvers import (LocalePrefixPattern, RegexPattern, RoutePattern, URLPattern,
+                                   URLResolver)
 
 from .conf import settings
 from .utils.text import replace
@@ -78,6 +79,8 @@ class URLPatternsSerializer:
             url = url_pattern.pattern._regex
         elif isinstance(url_pattern.pattern, RoutePattern):
             url = url_pattern.pattern._route
+        elif isinstance(url_pattern.pattern, LocalePrefixPattern):
+            url = str(url_pattern.pattern.regex)
         else:  # pragma: no cover
             raise ValueError(
                 'url_pattern must be a valid URL pattern ; "{}" is not'.format(url_pattern)

@@ -1,4 +1,5 @@
 from django.conf.urls import include, url
+from django.conf.urls.i18n import i18n_patterns
 from django.contrib import admin
 from django.urls import path, re_path
 
@@ -23,3 +24,7 @@ urlpatterns = [
     re_path(r'ping/(?P<year>[0-9]{4})/$', views.ping, name='ping_with_re_path'),
     path('ping/<slug>/', views.ping, name='ping_with_path_without_converter'),
 ]
+
+urlpatterns += i18n_patterns(
+    path('ping-i18n/', views.ping, name='ping_i18n'),
+)

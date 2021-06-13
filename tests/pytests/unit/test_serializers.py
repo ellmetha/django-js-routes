@@ -65,3 +65,8 @@ class TestURLPatternsSerializer:
     def test_can_serialize_specific_urls_that_have_a_path_without_converter(self):
         output_dict = json.loads(self.serializer.to_json())
         assert output_dict['ping_with_path_without_converter'] == '/ping/<slug>/'
+
+    @override_and_reload_settings(JS_ROUTES_INCLUSION_LIST=['ping_i18n', ])
+    def test_can_serialize_specific_urls_that_do_not_have_arguments_with_i18n(self):
+        output_dict = json.loads(self.serializer.to_json())
+        assert output_dict['ping_i18n'] == '/ping-i18n/'
