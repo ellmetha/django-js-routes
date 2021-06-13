@@ -4,7 +4,6 @@ import pytest
 
 from js_routes.serializers import URLPatternsSerializer
 from js_routes.test import override_and_reload_settings
-from django.utils.translation import activate
 
 
 class TestURLPatternsSerializer:
