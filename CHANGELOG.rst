@@ -1,22 +1,27 @@
 Changelog
 #########
 
-0.1.0
+0.1.4
 =====
 
-This is the initial release of Django-js-routes.
+* Ensure that URLs using `i18n_patterns` are properly exported
 
-0.1.1
+0.1.3
 =====
 
-* Add official support for Python 3.8
+* Fix Django version in README
 
 0.1.2
 =====
 
 * Fix package classifiers
 
-0.1.3
+0.1.1
 =====
 
-* Fix Django version in README
+* Add official support for Python 3.8
+
+0.1.0
+=====
+
+This is the initial release of Django-js-routes.
