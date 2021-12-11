@@ -16,8 +16,8 @@ jobs:
           '3.10'
         ]
         django-version: [
-          "django>=3.2,<4.0"
-          "django>=4.0,<4.1"
+          "django>=3.2,<4.0",
+          "django>=4.0,<4.1",
         ]
         exclude:
           - python-version: 3.6
