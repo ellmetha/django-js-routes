@@ -31,7 +31,7 @@ Django named URL patterns on the client side.
 Main requirements
 =================
 
-Python 3.5+, Django 2.2+.
+Python 3.6+, Django 3.2+.
 
 Installation
 ============
