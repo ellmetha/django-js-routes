@@ -50,7 +50,7 @@ lint:
 .PHONY: isort
 ## Check Python imports sorting.
 isort:
-	poetry run isort --check-only --recursive --diff $(PROJECT_PACKAGE) $(TEST_PACKAGE)
+	poetry run isort --check-only --diff $(PROJECT_PACKAGE) $(TEST_PACKAGE)
 
 
 # TESTING
