@@ -6,7 +6,7 @@
 
 """
 
-import imp
+import importlib
 
 from django.test.utils import override_settings
 
@@ -18,8 +18,8 @@ class override_and_reload_settings(override_settings):
 
     def __enter__(self):
         super().__enter__()
-        imp.reload(js_routes_settings)
+        importlib.reload(js_routes_settings)
 
     def __exit__(self, exc_type, exc_value, traceback):
         super().__exit__(exc_type, exc_value, traceback)
-        imp.reload(js_routes_settings)
+        importlib.reload(js_routes_settings)

@@ -42,6 +42,13 @@ INSTALLED_APPS = (
 )
 
 
+# GENERAL CONFIGURATION
+# ------------------------------------------------------------------------------
+
+# See: https://docs.djangoproject.com/en/dev/ref/settings/#use-tz
+USE_TZ = True
+
+
 # MIDDLEWARE CONFIGURATION
 # ------------------------------------------------------------------------------
 

@@ -8,6 +8,3 @@
     reverse URL lookups on the client side.
 
 """
-
-
-default_app_config = 'js_routes.apps.JSRoutesAppConfig'
