@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "django-js-routes"
-version = "0.2.0"
+version = "0.2.1.dev"
 description = "Expose and perform reverse lookups of Django URLs in the frontend world."
 authors = ["Morgan Aubert <me@morganaubert.name>"]
 license = "MIT"
