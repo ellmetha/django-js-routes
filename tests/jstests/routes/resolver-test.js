@@ -1,3 +1,7 @@
+/**
+ * @jest-environment jsdom
+ */
+
 /* eslint import/extensions: [0, {}] */
 /* eslint import/no-unresolved: [0, {}] */
 
