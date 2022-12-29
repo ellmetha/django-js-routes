@@ -27,7 +27,7 @@
     "gulp-env": "^0.4.0",
     "gulp-less": "^4.0.0",
     "gulp-util": "^3.0.8",
-    "jest": "^25.3.0",
+    "jest": "^29.3.1",
     "less-loader": "^4.1.0",
     "lodash.template": ">=4.5.0",
     "nan": "^2.10.0",
