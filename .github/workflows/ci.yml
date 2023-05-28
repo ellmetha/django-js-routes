@@ -50,6 +50,6 @@ jobs:
     - name: Run QA checks
       run: make qa
     - name: Run Python tests suite
-      run: poetry run pytest --cov-report xml --cov js_routes
+      run: poetry run pytest
     - name: Run JS test suite
       run: npm test
