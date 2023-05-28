@@ -16,10 +16,6 @@ django-js-routes
   :target: https://github.com/ellmetha/django-js-routes/actions
   :alt: Build status
 
-.. image:: https://img.shields.io/codecov/c/github/ellmetha/django-js-routes.svg
-    :target: https://codecov.io/github/ellmetha/django-js-routes
-    :alt: Codecov status
-
 |
 
 **Django-js-routes** is a Django application allowing to expose and perform reverse lookups of

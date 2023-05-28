@@ -36,7 +36,6 @@ python = "^3.6"
 django = "^3.2 || >=4.0"
 
 [tool.poetry.dev-dependencies]
-codecov = "*"
 django-debug-toolbar = "*"
 flake8 = "*"
 ipython = "*"
